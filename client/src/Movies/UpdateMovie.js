@@ -40,8 +40,7 @@ const handleSubmit = e => {
     e.preventDefault();
     const check = props.match.params.id
     console.log(check)
-    console.log(`film`, film)
-    film.id=check
+    
     axios
         .put(`http://localhost:5000/api/movies/${check}`, film) ///api/movies/:id
         .then(res => {
