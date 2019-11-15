@@ -43,7 +43,7 @@ const handleSubmit = e => {
     console.log(`film`, film)
     film.id=check
     axios
-        .put(`http://localhost:5000/api/movies/${film.id}`, film) ///api/movies/:id
+        .put(`http://localhost:5000/api/movies/${check}`, film) ///api/movies/:id
         .then(res => {
             // props.updatedList(res.data);
             props.history.push('/')
@@ -88,7 +88,7 @@ const handleSubmit = e => {
                 
             /> 
             <button>Update</button>
-            
+
             </form>
         </div>
     )
